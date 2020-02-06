@@ -209,7 +209,28 @@ public class Exercises {
 	}
 	
 	public int clumps(ArrayList<String> values) {
-		// write your code here
+		
+		if (values == null) {
+			return -1;
+		} else if(values != null) {
+			int clumps = 0;
+			boolean clumpSection = false;
+			for(int i = 0; i < values.length-1; i++) {
+				
+				if(clumpSection) {
+					if(!(values[i].equals(values[i+1]))){
+						clumpSection = false;
+					}
+				}else if(clumpSection == false) {
+					if(values[i].equals(values[i+1])) {
+						clumps++;
+						clumpSection = true;
+					}
+				}
+			
+			}
+			return clumps;
+		}
 		
 		return -1;		// default return value to ensure compilation
 	}
