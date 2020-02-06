@@ -185,20 +185,20 @@ public class Exercises {
 	}
 	
 	public boolean balance(ArrayList<Integer> numbers) {
-		if (numbers == null || numbers.length < 2) {
+		if (numbers == null || numbers.size() < 2) {
 			return false;
-		} else if(!(numbers == null || numbers.length < 2)) {
+		} else if(!(numbers == null || numbers.size() < 2)) {
 			int leftSum = 0;
 			int rightSum = 0;
 			
-			for(int i = 0; i < numbers.length; i++) {
-				rightSum += numbers[i];
+			for(int i = 0; i < numbers.size(); i++) {
+				rightSum += numbers.get(i);
 			}
 			
-			for(int j = 0; j < numbers.length-1; j ++) {
+			for(int j = 0; j < numbers.size()-1; j ++) {
 				if(leftSum != rightSum) {
-					leftSum+=numbers[j];
-					rightSum-=numbers[j];
+					leftSum+=numbers.get(j);
+					rightSum-=numbers.get(j);
 				}
 			}
 			
