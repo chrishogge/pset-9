@@ -38,7 +38,7 @@ public class Exercises {
 		
 		ArrayList<String> returnArray = new ArrayList<String>();
 		
-		return null;	// default return value to ensure compilation
+		return returnArray;	// default return value to ensure compilation
 	}
 	
 	public int difference(ArrayList<Integer> numbers) {
