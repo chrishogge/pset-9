@@ -130,11 +130,11 @@ public class Exercises {
 	}
 
 	public boolean increasing(ArrayList<Integer> numbers) {
-		if (numbers == null || numbers.length < 3) {
+		if (numbers == null || numbers.size() < 3) {
 			return false;
-		} else if(!(numbers == null || numbers.length < 3)) {
-			for(int i = 1; i < numbers.length-1; i++) {
-				if(numbers[i] > numbers[i-1] && numbers[i] < numbers[i+1]) {
+		} else if(!(numbers == null || numbers.size() < 3)) {
+			for(int i = 1; i < numbers.size()-1; i++) {
+				if(numbers.get(i) > numbers.get(i-1) && numbers.get(i) < numbers.get(i+1)) {
 					return true;
 				}
 			}
