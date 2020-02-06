@@ -102,7 +102,29 @@ public class Exercises {
 	}
 	
 	public ArrayList<String> middle(ArrayList<String> values) {
-		// write your code here
+		ArrayList<String> returnArray = new ArrayList<String>();
+		if (values == null || values.size() < 3 || values.size() % 2 == 0) {
+			return returnArray;
+		} else if(!(values == null || values.size() < 3 || values.size() % 2 == 0)) {
+			for(int a = 0; a < values.size(); a++) {
+				if(values.get(a) == null) {
+					return returnArray;
+				}
+			}
+			
+			int mid = (values.size()-1)/2;
+			
+			String firstString = values.get(mid-1);
+			String secondString = values.get(mid);
+			String thirdString = values.get(mid+1);
+			
+			ArrayList<String> middleArray = new ArrayList<String>();
+			middleArray.add(firstString);
+			middleArray.add(secondString);
+			middleArray.add(thirdString);
+			
+			return middleArray;
+		}
 		
 		return null;	// default return value to ensure compilation
 	}
