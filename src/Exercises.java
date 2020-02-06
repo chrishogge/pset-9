@@ -185,7 +185,25 @@ public class Exercises {
 	}
 	
 	public boolean balance(ArrayList<Integer> numbers) {
-		// write your code here
+		if (numbers == null || numbers.length < 2) {
+			return false;
+		} else if(!(numbers == null || numbers.length < 2)) {
+			int leftSum = 0;
+			int rightSum = 0;
+			
+			for(int i = 0; i < numbers.length; i++) {
+				rightSum += numbers[i];
+			}
+			
+			for(int j = 0; j < numbers.length-1; j ++) {
+				if(leftSum != rightSum) {
+					leftSum+=numbers[j];
+					rightSum-=numbers[j];
+				}
+			}
+			
+			return leftSum==rightSum;
+		}
 		
 		return false;	// default return value to ensure compilation
 	}
