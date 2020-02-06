@@ -42,7 +42,25 @@ public class Exercises {
 	}
 	
 	public int difference(ArrayList<Integer> numbers) {
-		// write your code here
+		if (numbers == null || numbers.size() < 1) {
+			return -1;	
+		} else if(!(numbers == null || numbers.size() < 1)){
+			
+			int inputMax = numbers.get(0);
+			int inputMin = numbers.get(0);
+			
+			for(int i = 0; i < numbers.size(); i++) {
+				if(numbers.get(i) > inputMax) {
+					inputMax = numbers.get(i);
+				}
+				
+				if(numbers.get(i) < inputMin) {
+					inputMin = numbers.get(i);
+				}
+			}
+			
+			return inputMax - inputMin;
+		}
 		
 		return -1;		// default return value to ensure compilation
 	}
