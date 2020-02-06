@@ -146,13 +146,13 @@ public class Exercises {
 	}
 	
 	public boolean everywhere(ArrayList<Integer> numbers, int x) {
-		if (numbers == null || numbers.length < 1) {
+		if (numbers == null || numbers.size() < 1) {
 			return false;
-		} else if(!(numbers == null || numbers.length < 1)) {
+		} else if(!(numbers == null || numbers.size() < 1)) {
 			int count = 0;
 			
-			for(int i = 1; i < numbers.length-2; i++) {
-				if((numbers[i] == x && numbers[i+1] == x) || (numbers[i] == x && numbers[i+2] == x)) {
+			for(int i = 1; i < numbers.size()-2; i++) {
+				if((numbers.get(i) == x && numbers.get(i+1) == x) || (numbers.get(i) == x && numbers.get(i+2) == x)) {
 					count++;
 				}
 			}
