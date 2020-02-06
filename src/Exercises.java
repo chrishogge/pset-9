@@ -215,14 +215,14 @@ public class Exercises {
 		} else if(values != null) {
 			int clumps = 0;
 			boolean clumpSection = false;
-			for(int i = 0; i < values.length-1; i++) {
+			for(int i = 0; i < values.size()-1; i++) {
 				
 				if(clumpSection) {
-					if(!(values[i].equals(values[i+1]))){
+					if(!(values.get(i).equals(values.get(i+1)))){
 						clumpSection = false;
 					}
 				}else if(clumpSection == false) {
-					if(values[i].equals(values[i+1])) {
+					if(values.get(i).equals(values.get(i+1))) {
 						clumps++;
 						clumpSection = true;
 					}
