@@ -146,7 +146,23 @@ public class Exercises {
 	}
 	
 	public boolean everywhere(ArrayList<Integer> numbers, int x) {
-		// write your code here
+		if (numbers == null || numbers.length < 1) {
+			return false;
+		} else if(!(numbers == null || numbers.length < 1)) {
+			int count = 0;
+			
+			for(int i = 1; i < numbers.length-2; i++) {
+				if((numbers[i] == x && numbers[i+1] == x) || (numbers[i] == x && numbers[i+2] == x)) {
+					count++;
+				}
+			}
+			
+			if(count!=0) {
+				return true;
+			}else if(count==0) {
+				return false;
+			}
+		}
 		
 		return false;	// default return value to ensure compilation
 	}
